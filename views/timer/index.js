@@ -69,7 +69,7 @@ export default function Timer({config, endTimer}) {
           sound={config.sound}
           countFinished={countFinished}
           duration={config.time * 1000}
-          longDelay={config.delay > 2}
+          longDelay={config.delay > 3}
         />
       </View>
       {/*  */}
@@ -258,8 +258,8 @@ const styles = StyleSheet.create({
 
 function fmTime(time) {
   let seconds = +time / 1000;
-  let long = seconds >= 10;
   let roundedSeconds = Math.round(seconds);
+  let long = roundedSeconds >= 10;
   let prefix = long ? '' : '0';
   return prefix + roundedSeconds;
 }

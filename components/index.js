@@ -39,7 +39,7 @@ const radio = StyleSheet.create({
 });
 
 export const CircleButton = ({color = 'lime', text, disabled, ...rest}) => (
-  <TouchableOpacity {...rest} disabled={disabled}>
+  <TouchableOpacity {...rest} disabled={disabled} activeOpacity={0.8}>
     <View
       style={{
         ...circleBtn.container,
@@ -70,7 +70,7 @@ export const SquareButton = ({
   disabled,
   ...rest
 }) => (
-  <TouchableOpacity disabled={disabled} {...rest}>
+  <TouchableOpacity disabled={disabled} {...rest} activeOpacity={0.8}>
     <View
       style={{
         ...btn.container,
